@@ -15,6 +15,9 @@ class CreateApplicantsTable extends Migration
     {
         Schema::create('applicants', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('position');
+            $table->string('where_job_found');
+            $table->string('referred_by');
             $table->string('last_name');
             $table->string('first_name');
             $table->string('middle_name');

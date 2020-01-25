@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('front.application.index');
 });
+
+
+Route::prefix('application')->group(function () {
+    Route::post('/save', 'ApplicantController@create');
+});
