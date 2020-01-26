@@ -8,12 +8,12 @@
     <form method="POST" action="/application/save">
         @csrf
         
-        <div class="container container-main"> 
-            <div> 
-                <div class="mt-5 mb-5"> 
-                    <h1 class="h2">ONLINE APPLICATION</h1>
-                </div>
-                
+        <div class="container mt-5 mb-5"> 
+            <h1 class="h2">ONLINE APPLICATION</h1>
+        </div>
+        <div class="container"> 
+            <div class="row"> 
+            <div class="col-lg-6"> 
                 @include('front.application.components.top')
                 
                 <div class="mt-5 mb-5"> 
@@ -22,8 +22,20 @@
                 
                 @include('front.application.components.personal')
             </div>
+            <div class="col-lg-6"> 
+                <div class="mb-5"> 
+                    <h2 class="h4">IN CASE OF EMERGENCY</h1>
+                </div>
+                 @include('front.application.components.incase-emergency')
+                 <div class="mb-5"> 
+                    <h2 class="h4">EDUCATIONAL BACKGROUND</h1>
+                </div>
+                @include('front.application.components.educational-background')
+            </div>
+            </div>
+            
         </div>
-        <button class="btn btn-primary" type="submit">Save</button>
+       
     </form>
 
 @endsection

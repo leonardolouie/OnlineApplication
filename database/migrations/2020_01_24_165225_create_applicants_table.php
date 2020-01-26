@@ -43,10 +43,11 @@ class CreateApplicantsTable extends Migration
             $table->string('mothers_name');
             $table->string('number_of_siblings');
             $table->string('number_of_children');
+            $table->string('spouse_name');
             $table->string('restriction_code');
             $table->string('license_number');
             $table->string('license_expiry_date');
-            $table->enum('type_of_license', array('Non-Prof', 'Professional'));
+            $table->string('type_of_license');
             /**
              * Emergency Person Fields
              */
