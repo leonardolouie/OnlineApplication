@@ -25,7 +25,7 @@ class ApplicantController extends Controller
     public function create(Request $request)
     {
         //
-        dd($request->last_name);
+        dd($request);
     }
 
     /**
