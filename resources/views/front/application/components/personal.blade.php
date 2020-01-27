@@ -1,7 +1,7 @@
 <div> 
     <div class="form-group"> 
         <div class="row"> 
-            <div class="col-md-3"><label for="last_name" class="font-weight-bold">Last Name *</label></div>
+            <div class="col-md-3"><label for="last_name" class="font-weight-bold">Last Name</label></div>
             <div class="col-md-9">
                <input type="text" class="form-control"  name="last_name" value="{{old('last_name')}}" id="last_name"/> 
             </div>
@@ -9,7 +9,7 @@
     </div>
     <div class="form-group"> 
         <div class="row"> 
-            <div class="col-md-3"><label for="first_name" class="font-weight-bold">First Name *</label></div>
+            <div class="col-md-3"><label for="first_name" class="font-weight-bold">First Name</label></div>
             <div class="col-md-9">
                <input type="text" class="form-control" name="first_name"  value="{{old('first_name')}}" id="first_name"/> 
             </div>
@@ -177,9 +177,9 @@
     </div>
     <div class="form-group"> 
         <div class="row"> 
-            <div class="col-md-3"><label for="last_name" class="font-weight-bold">SSS Number</label></div>
+            <div class="col-md-3"><label for="sss_number" class="font-weight-bold">SSS Number</label></div>
             <div class="col-md-9">
-               <input type="text" class="form-control"  name="last_name" value="{{old('last_name')}}" id="last_name"/> 
+               <input type="text" class="form-control"  name="sss_number" value="{{old('sss_number')}}" id="sss_number"/> 
             </div>
         </div>
     </div>

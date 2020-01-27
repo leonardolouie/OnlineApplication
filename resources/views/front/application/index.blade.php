@@ -29,11 +29,16 @@
                  @include('front.application.components.incase-emergency')
                  <div class="mb-5"> 
                     <h2 class="h4">EDUCATIONAL BACKGROUND</h1>
-                </div>
+                 </div>
                 @include('front.application.components.educational-background')
+                <div class="mb-5"> 
+                    <h2 class="h4">EMPLOYMENT HISTORY</h1>
+                 </div>
+                 @include('front.application.components.employment-history')
+
+                 <button type="submit" class="btn btn-primary">Submit Application</button>
             </div>
-            </div>
-            
+          </div>
         </div>
        
     </form>

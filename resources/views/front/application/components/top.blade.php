@@ -5,7 +5,6 @@
                 <div class="col-md-8">
                 <select class="form-control" id="position" old="{{old("position")}}" name="position">
                         <option value="driver">Driver</option>
-                        <option value="software engineer">Software Engineer</option>
                     </select>
                 </div>
             </div>
