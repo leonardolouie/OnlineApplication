@@ -1,2 +1,6 @@
 require('./bootstrap');
-alert('resources boostrap')
+
+
+$("#datepicker").datepicker({
+    format: "YYYY" 
+});

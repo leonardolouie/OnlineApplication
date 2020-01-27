@@ -129,41 +129,35 @@
     <div class="form-group"> 
         <div class="row"> 
             <div class="col-md-3 col-sm-3"><label for="height" class="font-weight-bold">Height</label></div>
-            <div class="col-md-3 col-sm-3">
+            <div class="col-md-4 col-sm-3">
                <input type="text" class="form-control" value="{{old('height')}}" name="height" id="height"/> 
             </div>
-            <div class="col-md-1 col-sm-1">
-            <input type="radio" class="form-check-input" name="height-m" value="ft">
+
+            <div class="col-md-2 checkbox__container"> 
+                <input type="radio" class="form-check-input" name="height-m" value="ft">
+                <p>ft</p>
             </div>
-            <div class="col-md-1 col-sm-1">
-                <span>ft</span>
-            </div> 
-            <div class="col-md-1 col-sm-1">
+            <div class="col-md-2 checkbox__container">
                 <input type="radio" class="form-check-input" name="height-m" value="cm">
+                <p>cm</p>
             </div>
-            <div class="col-md-1">
-                <span>cm</span>
-            </div> 
         </div>
     </div>
     <div class="form-group"> 
         <div class="row"> 
-            <div class="col-md-3  col-sm-3"><label for="weight" class="font-weight-bold">Weight</label></div>
-            <div class="col-md-3  col-sm-3">
+            <div class="col-md-3"><label for="weight" class="font-weight-bold">Weight</label></div>
+            <div class="col-md-4">
                <input type="text" class="form-control" value="{{old('weight')}}" name="weight" id="weight"/> 
             </div>
-            <div class="col-md-1 col-sm-1">
-            <input type="radio" class="form-check-input" name="weight-m" value="kg">
+
+            <div class="col-md-2 checkbox__container"> 
+                <input type="radio" class="form-check-input" name="weight-m" value="kg">
+                <p>kg</p>
             </div>
-            <div class="col-md-1 col-sm-1">
-                <span>kg</span>
-            </div> 
-            <div class="col-md-1 col-sm-1">
+            <div class="col-md-2 checkbox__container">
                 <input type="radio" class="form-check-input" name="weight-m" value="lbs">
+                <p>lbs</p>
             </div>
-            <div class="col-md-1 col-sm-1">
-                <span>lbs</span>
-            </div> 
         </div>
     </div>
     <div class="form-group"> 
@@ -280,19 +274,19 @@
     </div>
     <div class="form-group"> 
         <div class="row"> 
-            <div class="col-md-3 col-sm-3"><label for="type_of_license" class="font-weight-bold">Type of License</label></div>
-            <div class="col-md-2 col-sm-2">
+            <div class="col-md-3"><label for="type_of_license" class="font-weight-bold">Type of License</label></div>
+        
+               <div class="col-md-4 checkbox__container">
                 <input type="radio" class="form-check-input" name="type_of_license" value="Non Professional">
-            </div>
-            <div class="col-md-2 col-sm-2">
                 <p>Non-Prof</p>
-            </div> 
-            <div class="col-md-2 col-sm-2">
+               </div>
+          
+               <div class="col-md-4 checkbox__container"> 
                 <input type="radio" class="form-check-input" name="type_of_license" value="Professional">
-            </div>
-            <div class="col-md-2 col-sm-2">
                 <p>Professional</p>
-            </div> 
+              </div>
+ 
+         
         </div>
     </div>
 </div>
