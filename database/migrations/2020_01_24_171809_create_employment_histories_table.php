@@ -15,12 +15,12 @@ class CreateEmploymentHistoriesTable extends Migration
     {
         Schema::create('employment_histories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('applicant_id');
-            $table->string('company_name');
-            $table->string('position');
-            $table->string('from');
-            $table->string('to');
-            $table->text('reason_of_leaving');
+            $table->string('applicant_id')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('position')->nullable();
+            $table->string('from')->nullable();
+            $table->string('to')->nullable();
+            $table->text('reason_of_leaving')->nullable();
             $table->timestamps();
         });
     }

@@ -18,4 +18,5 @@ Route::get('/', function () {
 
 Route::prefix('application')->group(function () {
     Route::post('/save', 'ApplicantController@create');
+    Route::get('/success', 'ApplicantController@success');
 });

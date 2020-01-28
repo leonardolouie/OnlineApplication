@@ -73,7 +73,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="mobile_number" class="font-weight-bold">Mobile Number</label></div>
             <div class="col-md-6">
-               <input type="number" class="form-control" value="{{old('Number')}}" name="mobile_number" id="mobile_number"/> 
+               <input type="number" class="form-control" value="{{old('mobile_number')}}" name="mobile_number" id="mobile_number"/> 
             </div>
         </div>
     </div>
@@ -90,7 +90,6 @@
             <div class="col-md-3"><label for="gender" class="font-weight-bold">Gender</label></div>
             <div class="col-md-9">
                 <select class="form-control" id="gender" name="gender">
-                    <option >Please Select</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
@@ -102,7 +101,6 @@
             <div class="col-md-3"><label for="civil_status" class="font-weight-bold">Civil Status</label></div>
             <div class="col-md-9">
                 <select class="form-control"   name="civil_status" id="civil_status">
-                    <option >Please Select</option>
                     <option value="Single">Single</option>
                     <option value="Married">Married</option>
                     <option value="Divorced">Divorced</option>
@@ -115,7 +113,7 @@
     <div class="form-group row">
         <div class="col-md-3"><label for="birth_date" class="font-weight-bold">Date of Birth</label></div>
         <div class="col-md-9">
-          <input class="form-control" type="date" value="{{old('birth_date')}}" id="birth_date">
+          <input class="form-control" type="date" value="{{old('birth_date')}}" name="birth_date"   id="birth_date">
         </div>
     </div>
     <div class="form-group"> 
@@ -134,11 +132,11 @@
             </div>
 
             <div class="col-md-2 checkbox__container"> 
-                <input type="radio" class="form-check-input" name="height-m" value="ft">
+                <input type="radio" class="form-check-input" name="height_m" value="ft" checked>
                 <p>ft</p>
             </div>
             <div class="col-md-2 checkbox__container">
-                <input type="radio" class="form-check-input" name="height-m" value="cm">
+                <input type="radio" class="form-check-input" name="height_m" value="cm">
                 <p>cm</p>
             </div>
         </div>
@@ -151,11 +149,11 @@
             </div>
 
             <div class="col-md-2 checkbox__container"> 
-                <input type="radio" class="form-check-input" name="weight-m" value="kg">
+                <input type="radio" class="form-check-input" name="weight_m" value="kg" checked/>
                 <p>kg</p>
             </div>
             <div class="col-md-2 checkbox__container">
-                <input type="radio" class="form-check-input" name="weight-m" value="lbs">
+                <input type="radio" class="form-check-input" name="weight_m" value="lbs">
                 <p>lbs</p>
             </div>
         </div>
@@ -165,12 +163,10 @@
             <div class="col-md-3"><label for="religion" class="font-weight-bold">Religion</label></div>
             <div class="col-md-9">
                 <select class="form-control" name="religion" id="religion">
-                    <option >Please Select</option>
-                    <option value="Single">Single</option>
-                    <option value="Married">Married</option>
-                    <option value="Divorced">Divorced</option>
-                    <option value="Seperated">Seperated</option>
-                    <option value="Widowed">Widowed</option>
+                    <option value="Roman Catholic">Roman Catholic</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Born Again Christian">Born Again Christian</option>
+
                 </select>
             </div>
         </div>
@@ -269,7 +265,7 @@
     <div class="form-group row">
         <div class="col-md-3"><label for="license_expiry_date" class="font-weight-bold">Date of Expiry</label></div>
         <div class="col-md-9">
-          <input class="form-control" type="date" value="{{old('license_expiry_date')}}" id="license_expiry_date">
+          <input class="form-control" type="date"  name="license_expiry_date" value="{{old('license_expiry_date')}}" id="license_expiry_date">
         </div>
     </div>
     <div class="form-group"> 
@@ -277,7 +273,7 @@
             <div class="col-md-3"><label for="type_of_license" class="font-weight-bold">Type of License</label></div>
         
                <div class="col-md-4 checkbox__container">
-                <input type="radio" class="form-check-input" name="type_of_license" value="Non Professional">
+                <input type="radio" class="form-check-input" name="type_of_license" value="Non Professional" checked>
                 <p>Non-Prof</p>
                </div>
           
