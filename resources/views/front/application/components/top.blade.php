@@ -21,7 +21,7 @@
             <div class="row"> 
                 <div class="col-md-4"><label for="referred_by" class="font-weight-bold">Referred by</label></div>
                 <div class="col-md-8">
-                   <input type="text" class="form-control"  value="{{old("referred_by")}}" id="referred_by" name="referred_by" required/> 
+                   <input type="text" class="form-control"  value="{{old("referred_by")}}" id="referred_by" name="referred_by" /> 
                 </div>
             </div>
         </div>

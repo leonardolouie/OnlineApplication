@@ -53,8 +53,9 @@
                     <h2 class="h4">CHARACTER REFERENCE</h1>
                 </div>
                 @include('front.application.components.character-reference')
-
+                <div class="mb-5">
                 <button  type="submit" id="btn-submit" class="btn btn-primary">Submit Application</button>
+                </div>
             </div>
           </div>
         </div>

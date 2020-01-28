@@ -3,7 +3,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="last_name" class="font-weight-bold">Last Name</label></div>
             <div class="col-md-9">
-               <input type="text" class="form-control"  name="last_name" value="{{old('last_name')}}" id="last_name"/> 
+               <input type="text" class="form-control"  name="last_name" value="{{old('last_name')}}" id="last_name" required/> 
             </div>
         </div>
     </div>
@@ -11,7 +11,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="first_name" class="font-weight-bold">First Name</label></div>
             <div class="col-md-9">
-               <input type="text" class="form-control" name="first_name"  value="{{old('first_name')}}" id="first_name"/> 
+               <input type="text" class="form-control" name="first_name"  value="{{old('first_name')}}" id="first_name" required/> 
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="nickname" class="font-weight-bold">Nickname</label></div>
             <div class="col-md-9">
-               <input type="text" class="form-control"  value="{{old('nickname')}}" name="nickname" id="nickname"/> 
+               <input type="text" class="form-control"  value="{{old('nickname')}}" name="nickname" id="nickname" required/> 
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="current_address" class="font-weight-bold">Current Address</label></div>
             <div class="col-md-9">
-                <textarea class="form-control" name="current_address" id="current_address" rows="3">{{old('current_address')}}</textarea>
+                <textarea class="form-control" name="current_address" id="current_address" rows="3" required>{{old('current_address')}}</textarea>
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="permanent_address" class="font-weight-bold">Permanent Address</label></div>
             <div class="col-md-9">
-               <textarea class="form-control" name="permanent_address" id="permanent_address" rows="3">{{old('permanent_address')}}</textarea>
+               <textarea class="form-control" name="permanent_address" id="permanent_address" rows="3" required>{{old('permanent_address')}}</textarea>
             </div>
         </div>
     </div>
@@ -73,7 +73,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="mobile_number" class="font-weight-bold">Mobile Number</label></div>
             <div class="col-md-6">
-               <input type="number" class="form-control" value="{{old('mobile_number')}}" name="mobile_number" id="mobile_number"/> 
+               <input type="number" class="form-control" value="{{old('mobile_number')}}" name="mobile_number" id="mobile_number" required/> 
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="email" class="font-weight-bold">Email Address</label></div>
             <div class="col-md-9">
-               <input type="text" class="form-control"  value="{{old('email')}}"  name="email" id="email"/> 
+               <input type="text" class="form-control"  value="{{old('email')}}"  name="email" id="email" required/> 
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="gender" class="font-weight-bold">Gender</label></div>
             <div class="col-md-9">
-                <select class="form-control" id="gender" name="gender">
+                <select class="form-control" id="gender" name="gender" required>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
@@ -100,7 +100,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="civil_status" class="font-weight-bold">Civil Status</label></div>
             <div class="col-md-9">
-                <select class="form-control"   name="civil_status" id="civil_status">
+                <select class="form-control"   name="civil_status" id="civil_status" required>
                     <option value="Single">Single</option>
                     <option value="Married">Married</option>
                     <option value="Divorced">Divorced</option>
@@ -113,14 +113,14 @@
     <div class="form-group row">
         <div class="col-md-3"><label for="birth_date" class="font-weight-bold">Date of Birth</label></div>
         <div class="col-md-9">
-          <input class="form-control" type="date" value="{{old('birth_date')}}" name="birth_date"   id="birth_date">
+          <input class="form-control" type="date" value="{{old('birth_date')}}" name="birth_date"   id="birth_date" required>
         </div>
     </div>
     <div class="form-group"> 
         <div class="row"> 
             <div class="col-md-3"><label for="birth_place" class="font-weight-bold">Birth Place</label></div>
             <div class="col-md-9">
-               <input type="text" class="form-control" value="{{old('birth_place')}}" name="birth_place" id="birth_place"/> 
+               <input type="text" class="form-control" value="{{old('birth_place')}}" name="birth_place" id="birth_place" required/> 
             </div>
         </div>
     </div>
@@ -128,7 +128,7 @@
         <div class="row"> 
             <div class="col-md-3 col-sm-3"><label for="height" class="font-weight-bold">Height</label></div>
             <div class="col-md-4 col-sm-3">
-               <input type="text" class="form-control" value="{{old('height')}}" name="height" id="height"/> 
+               <input type="text" class="form-control" value="{{old('height')}}" name="height" id="height" required/> 
             </div>
 
             <div class="col-md-2 checkbox__container"> 
@@ -145,7 +145,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="weight" class="font-weight-bold">Weight</label></div>
             <div class="col-md-4">
-               <input type="text" class="form-control" value="{{old('weight')}}" name="weight" id="weight"/> 
+               <input type="text" class="form-control" value="{{old('weight')}}" name="weight" id="weight" required/> 
             </div>
 
             <div class="col-md-2 checkbox__container"> 
@@ -162,7 +162,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="religion" class="font-weight-bold">Religion</label></div>
             <div class="col-md-9">
-                <select class="form-control" name="religion" id="religion">
+                <select class="form-control" name="religion" id="religion" required>
                     <option value="Roman Catholic">Roman Catholic</option>
                     <option value="Islam">Islam</option>
                     <option value="Born Again Christian">Born Again Christian</option>
@@ -205,7 +205,7 @@
     </div>
     <div class="form-group"> 
         <div class="row"> 
-            <div class="col-md-3"><label for="fathers_name" class="font-weight-bold">Father's Name</label></div>
+            <div class="col-md-3"><label for="fathers_name" class="font-weight-bold" >Father's Name</label></div>
             <div class="col-md-9">
                <input type="text" class="form-control"  name="fathers_name" value="{{old('fathers_name')}}" id="fathers_name"/> 
             </div>
@@ -215,7 +215,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="mothers_name" class="font-weight-bold">Mother's Name</label></div>
             <div class="col-md-9">
-               <input type="text" class="form-control"  name="mothers_name" value="{{old('mothers_name')}}" id="mothers_name"/> 
+               <input type="text" class="form-control"  name="mothers_name" value="{{old('mothers_name')}}" id="mothers_name" required/> 
             </div>
         </div>
     </div>
@@ -258,14 +258,14 @@
         <div class="row"> 
             <div class="col-md-3"><label for="license_number" class="font-weight-bold">License Number</label></div>
             <div class="col-md-7">
-               <input type="number" class="form-control" value="{{old('license_number')}}" name="license_number" id="license_number"/> 
+               <input type="number" class="form-control" value="{{old('license_number')}}" name="license_number" id="license_number" required/> 
             </div>
         </div>
     </div>
     <div class="form-group row">
         <div class="col-md-3"><label for="license_expiry_date" class="font-weight-bold">Date of Expiry</label></div>
         <div class="col-md-9">
-          <input class="form-control" type="date"  name="license_expiry_date" value="{{old('license_expiry_date')}}" id="license_expiry_date">
+          <input class="form-control" type="date"  name="license_expiry_date" value="{{old('license_expiry_date')}}" id="license_expiry_date" required>
         </div>
     </div>
     <div class="form-group"> 
