@@ -62,7 +62,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="telephone_number" class="font-weight-bold">Telephone Number</label></div>
             <div class="col-md-6">
-               <input type="number" class="form-control"   value="{{old('telephone_number')}}" name="telephone_number" id="telephone_number"/> 
+               <input type="text" class="form-control"   value="{{old('telephone_number')}}" name="telephone_number" id="telephone_number"/> 
             </div>
             <div class="col-md-3"> 
                 <span> (You can leave it blank )</span>
@@ -73,7 +73,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="mobile_number" class="font-weight-bold">Mobile Number</label></div>
             <div class="col-md-6">
-               <input type="number" class="form-control" value="{{old('mobile_number')}}" name="mobile_number" id="mobile_number" required/> 
+               <input type="text" class="form-control" value="{{old('mobile_number')}}" name="mobile_number" id="mobile_number" required/> 
             </div>
         </div>
     </div>

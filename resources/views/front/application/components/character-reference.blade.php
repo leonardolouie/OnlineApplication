@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-md-3"><label for="ref_contact_number1" class="font-weight-bold">Contact Number</label></div>
                 <div class="col-md-3">
-                    <input type="number" class="form-control"  name="ref_contact_number[]"  value="{{old('ref_contact_number.0')}}" id="ref_contact_number1"/> 
+                    <input type="text" class="form-control"  name="ref_contact_number[]"  value="{{old('ref_contact_number.0')}}" id="ref_contact_number1"/> 
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-md-3"><label for="ref_contact_number2" class="font-weight-bold">Contact Number</label></div>
                 <div class="col-md-3">
-                    <input type="number" class="form-control"  name="ref_contact_number[]"  value="{{old('ref_contact_number.1')}}" id="ref_contact_number2"/> 
+                    <input type="text" class="form-control"  name="ref_contact_number[]"  value="{{old('ref_contact_number.1')}}" id="ref_contact_number2"/> 
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@
                 </div>
                 <div class="col-md-3"><label for="ref_contact_number3" class="font-weight-bold">Contact Number</label></div>
                 <div class="col-md-3">
-                    <input type="number" class="form-control"  name="ref_contact_number[]"  value="{{old('ref_contact_number.2')}}" id="ref_contact_number3"/> 
+                    <input type="text" class="form-control"  name="ref_contact_number[]"  value="{{old('ref_contact_number.2')}}" id="ref_contact_number3"/> 
                 </div>
             </div>
         </div>

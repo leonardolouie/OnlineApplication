@@ -30,15 +30,7 @@ class ApplicantController extends Controller
     public function create(Request $request)
     {
        
-
-        //dd(["ref_name"=> $request->ref_name, "ref_company" => $request->ref_company , "ref_position" => $request->ref_position, "ref_contact_number" => $request->ref_contact_number]);
-       
-
-        // dd(["company" => $request->company_name , "position" => $request->position, 
-        // "resont of leaving" => $request->reason_of_leaving, "from_month" => $request->from_month, "from_year"  => $request->from_year]);
         $nullvalue="N/A";
-
-
         $validator = Validator::make($request->all(), [
             'position' => 'required',
             'where_job_found' => 'required',
@@ -59,17 +51,11 @@ class ApplicantController extends Controller
             'religion' => 'required',
             'fathers_name' => 'required',
             'mothers_name' => 'required',
-            'restriction_code' => 'required',
-            'license_number' => 'required|min:8',
-            'license_expiry_date' => 'required',
             'type_of_license' =>  'required',
             'e_name' =>  'required',
             'e_relation' => 'required',
             'e_address' => 'required|min:9', 
             'e_contact_number' => 'required|min:11'
-
-
-            
         ]);
 
         $height = $request->height ."".$request->height_m;

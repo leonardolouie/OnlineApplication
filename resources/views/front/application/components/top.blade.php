@@ -4,8 +4,7 @@
                 <div class="col-md-4"><label for="position" class="font-weight-bold">Position Applying for</label></div>
                 <div class="col-md-8">
                 <select class="form-control" id="position" value="{{old("position")}}" name="position" required>
-                        <option value="driver">Driver</option>
-                    </select>
+                 </select>
                 </div>
             </div>
         </div>

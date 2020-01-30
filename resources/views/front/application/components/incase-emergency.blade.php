@@ -27,7 +27,7 @@
         <div class="row"> 
             <div class="col-md-3"><label for="e_contact_number" class="font-weight-bold">Contact Number</label></div>
             <div class="col-md-9">
-               <input type="number" class="form-control"  name="e_contact_number" value="{{old('e_contact_number')}}" id="e_contact_number" required/> 
+               <input type="text" class="form-control"  name="e_contact_number" value="{{old('e_contact_number')}}" id="e_contact_number" required/> 
             </div>
         </div>
     </div>

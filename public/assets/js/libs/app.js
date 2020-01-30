@@ -6,7 +6,7 @@ $(document).ready(function(){
     
     printYear();
     printMonth();
-    
+    printJobs();
     
     $("#btn-submit").click(function(event){
         event.preventDefault();
@@ -45,6 +45,66 @@ $(document).ready(function(){
         for ( i = 1960; end_year >= i ; end_year--) {
             $(".date-year-picker").append(new Option(end_year, end_year));
         }
+    }
+
+    function printJobs() {
+
+        var jobs = ["ADMIN STAFF", 
+        "ACCOUNTING OFFICER", 
+        "AREA COORDINATOR", 
+        "AREA SUPERVISOR", 
+        "BILLING ASSOCIATE",
+        "BILLING MESSENGER",
+        "BUILDING ATTENDANT",
+        "CASH CUSTODIAN",
+        "CASHIER",
+        "CONCIERGE",
+        "CUSTOMER ASSOCIATE",
+        "DATA ENCODER",
+        "DELIVERY ASSOCIATE",
+        "DELIVERY RIDER",
+        "DELIVERY RUNNER/WALKER",
+        "DISPATCHER",
+        "DRIVER",
+        "DUCTMAN INSTALLER",
+        "ENCODER",
+        "EXCHANGE ASSOCIATE",
+        "FLEET MANAGEMENT ASSOCIATE",
+        "JANITOR",
+        "JANITRESS",
+        "KITCHEN COOK",
+        "KITCHEN HELPER",
+        "LEAFLETER",
+        "MAINTENANCE",
+        "MECHANIC",
+        "MERCHANDISER",
+        "MOTORIZED SALESMAN",
+        "OFFICE STAFF",
+        "PIPE INSTALLER",
+        "POD MONITORING",
+        "POST DELIVERY ASSOCIATE",
+        "PRE/POST DELIVERY ASSOCIATE",
+        "PUD DRIVER",
+        "PUD HELPER",
+        "PUSH GIRL",
+        "SALES CLERK",
+        "SALES LADY",
+        "SALES REPRESENTATIVE",
+        "SALES STAFF",
+        "SELLER",
+        "SERVICE CREW",
+        "SORTER",
+        "SUPERVISOR",
+        "TAX ASSOCIATE",
+        "WAREHOUSE ASSOCIATE",
+        "WAREHOUSE CHECKER",
+        "WELDER",
+        "DELIVERY BIKER",
+        "ASSISTANT PIPE FITTER"]
+
+        jobs.forEach(function(month) {
+            $("#position").append(new Option(month, month));
+        });
     }
 })
 
