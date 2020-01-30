@@ -102,8 +102,8 @@ $(document).ready(function(){
         "DELIVERY BIKER",
         "ASSISTANT PIPE FITTER"]
 
-        jobs.forEach(function(month) {
-            $("#position").append(new Option(month, month));
+        jobs.forEach(function(job) {
+            $("#position").append(new Option(job, job));
         });
     }
 })
