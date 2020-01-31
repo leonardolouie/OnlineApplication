@@ -30,6 +30,7 @@ class ApplicantController extends Controller
     public function create(Request $request)
     {
        
+   
         $nullvalue="N/A";
         $validator = Validator::make($request->all(), [
             'position' => 'required',
@@ -55,17 +56,32 @@ class ApplicantController extends Controller
             'e_name' =>  'required',
             'e_relation' => 'required',
             'e_address' => 'required|min:9', 
-            'e_contact_number' => 'required|min:11'
+            'e_contact_number' => 'required|min:11',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
-        $height = $request->height ."".$request->height_m;
-        $weight = $request->weight ."".$request->weight_m;
-
+       
+    
         if ($validator->fails()) {
             return Redirect::back()->withInput($request->all())->withErrors($validator);
         }
 
         else {
+
+
+            //image upload
+            $destination = public_path('images/avatar');
+            $imageName = time().'-avatar.'.request()->image->getClientOriginalExtension();
+            $file_url = env('APP_URL').'images/avatar/'.$imageName;
+            request()->image->move( $destination, $imageName);
+
+
+
+
+            $height = $request->height ."".$request->height_m;
+            $weight = $request->weight ."".$request->weight_m;
+
+            //crud for applicant
             $applicant = Applicant::create([
                 'position' => $request->position,
                 'where_job_found' => $request->where_job_found, 
@@ -116,9 +132,7 @@ class ApplicantController extends Controller
                 'college_year_grad' => isset( $request->college_year_grad) ? $request->college_year_grad :  $nullvalue,
                 'college_course' =>  isset( $request->college_course) ? $request->college_course :  $nullvalue,
                 'college_status' =>  isset( $request->college_status) ? $request->college_status :  $nullvalue,
-
-
-
+                'image' => $file_url
 
             ]);
 

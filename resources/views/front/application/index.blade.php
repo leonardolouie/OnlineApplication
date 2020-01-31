@@ -5,7 +5,7 @@
 
 
 
-    <form method="POST" action="/application/save" id="application-form">
+    <form method="POST" action="/application/save" id="application-form" enctype="multipart/form-data">
         
       
         @csrf

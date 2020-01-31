@@ -271,7 +271,7 @@
     <div class="form-group"> 
         <div class="row"> 
             <div class="col-md-3"><label for="type_of_license" class="font-weight-bold">Type of License</label></div>
-        
+
                <div class="col-md-4 checkbox__container">
                 <input type="radio" class="form-check-input" name="type_of_license" value="Non Professional" checked>
                 <p>Non-Prof</p>
@@ -281,8 +281,14 @@
                 <input type="radio" class="form-check-input" name="type_of_license" value="Professional">
                 <p>Professional</p>
               </div>
- 
-         
         </div>
+    </div>
+    <div class="form-group">
+        <div class="row"> 
+        <div class="col-md-3"> <label for="imageInput" class="font-weight-bold">Upload Image</label></div>
+        <div class="col-md-8">
+        <input class="btn btn-warning" data-preview="#preview" name="image" value="{{old('image')}}" type="file" id="image" required/>
+        </div>
+    </div>
     </div>
 </div>

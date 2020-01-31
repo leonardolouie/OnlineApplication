@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2020 at 08:27 PM
+-- Generation Time: Jan 31, 2020 at 05:19 AM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -63,6 +63,7 @@ CREATE TABLE `applicants` (
   `license_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `license_expiry_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `type_of_license` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `e_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `e_relation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `e_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,

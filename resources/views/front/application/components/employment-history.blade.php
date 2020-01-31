@@ -64,7 +64,7 @@
         </div>
         <div class="form-group"> 
             <div class="row"> 
-                <div class="col-md-3"><label for="position_h2" class="font-weight-bold">position_h</label></div>
+                <div class="col-md-3"><label for="position_h2" class="font-weight-bold">Position</label></div>
                 <div class="col-md-9">
                     <input type="text" class="form-control"  name="position_h[]" value="{{old('position_h.1')}}" id="position_h2"/> 
                 </div>

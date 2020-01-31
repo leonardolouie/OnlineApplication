@@ -48,6 +48,7 @@ class CreateApplicantsTable extends Migration
             $table->string('license_number')->nullable();
             $table->string('license_expiry_date')->nullable();
             $table->string('type_of_license')->nullable();
+            $table->string('image')->nullable();
             /**
              * Emergency Person Fields
              */
