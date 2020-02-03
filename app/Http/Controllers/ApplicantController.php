@@ -34,7 +34,6 @@ class ApplicantController extends Controller
         $nullvalue="N/A";
         $validator = Validator::make($request->all(), [
             'position' => 'required',
-            'where_job_found' => 'required',
             'last_name' => 'required|min:2', 
             'first_name' => 'required', 
             'current_address' => 'required|min:9', 
@@ -52,7 +51,6 @@ class ApplicantController extends Controller
             'religion' => 'required',
             'fathers_name' => 'required',
             'mothers_name' => 'required',
-            'type_of_license' =>  'required',
             'e_name' =>  'required',
             'e_relation' => 'required',
             'e_address' => 'required|min:9', 

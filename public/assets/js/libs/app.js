@@ -7,11 +7,85 @@ $(document).ready(function(){
     printYear();
     printMonth();
     printJobs();
-    
+    printReligion();
+    showOtherReligion();
+    showReferral();
+    showLicenseToDriver();
+
+
+    $("#where_job_found").change(function() {
+        showReferral();
+
+    });
+
+
+    $("#religion").change(function() {
+        showOtherReligion();
+
+    });
+
+    $("#position").change(function() {
+        showLicenseToDriver();
+
+    });
+
+
+
+
     $("#btn-submit").click(function(event){
         event.preventDefault();
         submitForm()
     })
+
+
+
+    function showLicenseToDriver () {
+
+        var position = $("#position").val()
+
+        const driver_job = [ "DELIVERY RIDER", "DRIVER"]
+     
+
+        if(driver_job.includes(position)) {
+            $("#form_license").show();
+        }
+        else { 
+            $("#form_license").hide();
+        }
+
+
+    }
+
+    
+
+    function showReferral() {
+        var find_job = $("#where_job_found").val()
+        var lower_job = find_job.toLowerCase();
+
+
+        if(lower_job === 'referral' || lower_job === 'job posting sites') {
+            $("#referred_by_form").show();
+        }
+        else { 
+            $("#referred_by_form").hide();
+        }
+
+    }
+
+    function showOtherReligion(){
+
+        var religion = $("#religion").val()
+        var lower_religion = religion.toLowerCase();
+
+        if(lower_religion == 'others') {
+            $("#other_religion").show();
+        }
+        else { 
+            $("#other_religion").hide();
+        }
+
+
+    }
     
 
     function submitForm() { 
@@ -31,6 +105,14 @@ $(document).ready(function(){
         });
     }
     
+
+    function printReligion() {
+        var religions = ["Roman Catholic", "Protestant", "Islam", "Iglesia ni Cristo", "Buddhists", "Others"];
+        religions.forEach(function(religion) {
+            $(".religion_picker").append(new Option(religion, religion));
+        });
+        
+    }
     
     
     function printMonth() {
