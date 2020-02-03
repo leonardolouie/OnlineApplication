@@ -164,7 +164,7 @@
             <div class="col-md-9">
                 <select class="form-control religion_picker"  name="religion" id="religion" required>
                 </select>
-                <input type="text" name="other_religion" id="other_religion" class="form-control" placeholder="Please enter your other religion" />
+            <input type="text" name="other_religion" id="other_religion" old="{{old("other_religion")}} "class="form-control" placeholder="Please enter your other religion" />
             </div>
         </div>
     </div>
@@ -286,7 +286,7 @@
         <div class="row"> 
             <div class="col-md-3"> <label for="imageInput" class="font-weight-bold">Upload Image</label></div>
             <div class="col-md-8">
-                <input class="btn btn-warning" data-preview="#preview" name="image" value="{{old('image')}}" type="file" id="image" required/>
+                <input class="btn btn-primary" data-preview="#preview" name="image" value="{{old('image')}}" type="file" id="image" required/>
             </div>
         </div>
     </div>

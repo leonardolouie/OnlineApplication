@@ -53,11 +53,11 @@
                     <h2 class="h4">CHARACTER REFERENCE</h1>
                 </div>
                 @include('front.application.components.character-reference')
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                <button type="button"  id="preview-summary-button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
                     Preview Application
                 </button>
                 <div class="mb-5 mt-2">
-                <button  type="submit" id="btn-submit" class="btn btn-primary">Submit Application</button>
+                 <button  type="submit" id="btn-submit" class="btn btn-primary">Submit Application</button>
                 </div>
             </div>
           </div>
@@ -72,12 +72,11 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
-                  ...
+                <div class="modal-body" id="application-form-summary">
+               
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                 <p> we will use that information to respond to your application and to help us get the information you have requested</p>
                 </div>
               </div>
             </div>

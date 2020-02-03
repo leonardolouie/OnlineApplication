@@ -4,38 +4,66 @@ $(document).ready(function(){
     
     
     
-    printYear();
-    printMonth();
-    printJobs();
-    printReligion();
-    showOtherReligion();
-    showReferral();
-    showLicenseToDriver();
+    printYear()
+    printMonth()
+    printJobs()
+    printReligion()
+    showOtherReligion()
+    showReferral()
+    showLicenseToDriver()
 
 
     $("#where_job_found").change(function() {
-        showReferral();
+        showReferral()
 
-    });
+    })
 
 
     $("#religion").change(function() {
-        showOtherReligion();
+        showOtherReligion()
 
-    });
+    })
 
     $("#position").change(function() {
-        showLicenseToDriver();
+        showLicenseToDriver()
 
-    });
-
-
+    })
 
 
     $("#btn-submit").click(function(event){
-        event.preventDefault();
+        event.preventDefault()
         submitForm()
     })
+
+    $("#preview-summary-button").click(function() {
+        showSummaryOfApplication()
+    })
+
+
+
+    function showSummaryOfApplication() { 
+
+        var first_name = $("#first_name").val();
+        var last_name = $("#last_name").val();
+
+
+
+        $("#application-form-summary").
+        html('<div class="row"> '+
+             '<div class="col-md-5"> <label>Position Name:</label></div>'+
+             '<div class="col-md-4"> <p>'+first_name+'</p> </div> </div>' + 
+             '<div class="row"> '+
+             '<div class="row"> '+
+             '<div class="col-md-5"> <label>First Name:</label></div>'+
+             '<div class="col-md-4"> <p>'+first_name+'</p> </div> </div>' + 
+             '<div class="row"> '+'<div class="row"> '+
+             '<div class="col-md-5"> <label>First Name:</label></div>'+
+             '<div class="col-md-4"> <p>'+first_name+'</p> </div> </div>' + 
+             '<div class="row"> '+
+             '<div class="col-md-5"> <label>Last Name:</label></div>'+
+             '<div class="col-md-4"> <p>'+last_name+'</p> </div> </div>');
+        
+    }
 
 
 
@@ -47,10 +75,10 @@ $(document).ready(function(){
      
 
         if(driver_job.includes(position)) {
-            $("#form_license").show();
+            $("#form_license").show()
         }
         else { 
-            $("#form_license").hide();
+            $("#form_license").hide()
         }
 
 
@@ -60,14 +88,14 @@ $(document).ready(function(){
 
     function showReferral() {
         var find_job = $("#where_job_found").val()
-        var lower_job = find_job.toLowerCase();
+        var lower_job = find_job.toLowerCase()
 
 
         if(lower_job === 'referral' || lower_job === 'job posting sites') {
-            $("#referred_by_form").show();
+            $("#referred_by_form").show()
         }
         else { 
-            $("#referred_by_form").hide();
+            $("#referred_by_form").hide()
         }
 
     }
@@ -75,13 +103,13 @@ $(document).ready(function(){
     function showOtherReligion(){
 
         var religion = $("#religion").val()
-        var lower_religion = religion.toLowerCase();
+        var lower_religion = religion.toLowerCase()
 
         if(lower_religion == 'others') {
-            $("#other_religion").show();
+            $("#other_religion").show()
         }
         else { 
-            $("#other_religion").hide();
+            $("#other_religion").hide()
         }
 
 
@@ -98,34 +126,34 @@ $(document).ready(function(){
         })
         .then((willSubmit) => {
             if (willSubmit) {
-                $("#application-form").submit();
+                $("#application-form").submit()
             } else {
                 
             }
-        });
+        })
     }
     
 
     function printReligion() {
-        var religions = ["Roman Catholic", "Protestant", "Islam", "Iglesia ni Cristo", "Buddhists", "Others"];
+        var religions = ["Roman Catholic", "Protestant", "Islam", "Iglesia ni Cristo", "Buddhists", "Others"]
         religions.forEach(function(religion) {
-            $(".religion_picker").append(new Option(religion, religion));
-        });
+            $(".religion_picker").append(new Option(religion, religion))
+        })
         
     }
     
     
     function printMonth() {
-        var months = ["January", "Februray", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var months = ["January", "Februray", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         months.forEach(function(month) {
-            $(".date-month-picker").append(new Option(month, month));
-        });
+            $(".date-month-picker").append(new Option(month, month))
+        })
         
     }
     function printYear() {
         var end_year = 2020
         for ( i = 1960; end_year >= i ; end_year--) {
-            $(".date-year-picker").append(new Option(end_year, end_year));
+            $(".date-year-picker").append(new Option(end_year, end_year))
         }
     }
 
@@ -185,8 +213,8 @@ $(document).ready(function(){
         "ASSISTANT PIPE FITTER"]
 
         jobs.forEach(function(job) {
-            $("#position").append(new Option(job, job));
-        });
+            $("#position").append(new Option(job, job))
+        })
     }
 })
 

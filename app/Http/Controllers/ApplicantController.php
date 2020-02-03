@@ -30,9 +30,13 @@ class ApplicantController extends Controller
     public function create(Request $request)
     {
        
-   
-        $nullvalue="N/A";
-        $validator = Validator::make($request->all(), [
+
+        //dd($request->other_religion, $request->religion);
+
+
+        $religion_validation = $request->religion == 'Others' ? ['other_religion' => 'required'] : ['religion' => 'required'];
+
+        $validation_array = [
             'position' => 'required',
             'last_name' => 'required|min:2', 
             'first_name' => 'required', 
@@ -48,7 +52,6 @@ class ApplicantController extends Controller
             'height_m' => 'required',
             'weight' => 'required',
             'weight_m' => 'required',
-            'religion' => 'required',
             'fathers_name' => 'required',
             'mothers_name' => 'required',
             'e_name' =>  'required',
@@ -56,9 +59,13 @@ class ApplicantController extends Controller
             'e_address' => 'required|min:9', 
             'e_contact_number' => 'required|min:11',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-        ]);
+        ];
+        $merge_validation = array_merge($validation_array,  $religion_validation);
 
-       
+
+        $nullvalue="N/A";
+        $validator = Validator::make($request->all(),   $merge_validation);
+
     
         if ($validator->fails()) {
             return Redirect::back()->withInput($request->all())->withErrors($validator);
@@ -100,7 +107,7 @@ class ApplicantController extends Controller
                 'birth_place' => $request->birth_place,
                 'height' =>   $height,
                 'weight' =>   $weight,
-                'religion' => $request->religion,
+                'religion' => $request->religion == 'Others' ? $request->other_religion :  $request->religion,
                 'sss_number' => isset( $request->sss_number) ? $request->sss_number :  $nullvalue, 
                 'phil_number' => isset( $request->phil_number) ? $request->phil_number :  $nullvalue, 
                 'hmdf_number' => isset( $request->hmdf_number) ? $request->hmdf_number :  $nullvalue, 
