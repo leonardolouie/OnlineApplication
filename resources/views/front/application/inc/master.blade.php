@@ -183,15 +183,6 @@
             </div>
             <div class="row">
                 <div class="col-md-6">  
-                  <label class="font-weight-bold">Weight:</label>
-                </div>
-                <div class="col-md-6">  
-                    <p>{{data.religion}} {{data.weight_m}}</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">  
                   <label class="font-weight-bold">Religion:</label>
                 </div>
                 <div class="col-md-6">  
