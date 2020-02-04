@@ -84,8 +84,84 @@ $(document).ready(function(){
         var e_relation = $("#e_relation").val();
         var e_address = $("#e_address").val();
         var e_contact_number = $("#e_contact_number").val();
+        var elemetary = $("#elemetary").val();
+        var elemetary_year_grad = $("#elemetary_year_grad").val();
+        var secondary = $("#secondary").val();
+        var secondary_year_grad = $("#secondary_year_grad").val();
+        var vocational = $("#vocational").val();
+        var vocational_year_grad = $("#vocational_year_grad").val();
+        var vocational_course = $("#vocational_course").val();
+        var vocational_status = $("#vocational_status").val();
+        var college = $("#college").val();
+        var college_year_grad = $("#college_year_grad").val();
+        var college_course = $("#college_course").val();
+        var college_status = $("#college_status").val();
+        
+
+        var position_array = []
+        var company_name_array=[]
+        var from_month_array=[]
+        var from_year_array=[]
+        var reason_of_leaving_array=[]
+        var ref_name_array=[]
+        var ref_company_array=[]
+        var ref_contact_number_array=[]
+        var ref_position_array=[]
+
+  
+
+        $("input[name*='position_h[]']").each(function() {
+            return position_array.push($(this).val())
+        });
+         $("input[name*='company_name[]']").each(function() {
+            return company_name_array.push($(this).val())
+        });
+        $("[name*='from_month[]']").each(function() {
+            return from_month_array.push($(this).val())
+        });
+
+        $("[name*='from_year[]']").each(function() {
+            return from_year_array.push($(this).val())
+        });
+       
+        $("input[name*='reason_of_leaving[]']").each(function() {
+            return reason_of_leaving_array.push($(this).val())
+        });
+               
+        $("input[name*='ref_name[]']").each(function() {
+            return ref_name_array.push($(this).val())
+        });
+
+        $("input[name*='ref_position[]']").each(function() {
+            return ref_position_array.push($(this).val())
+        });
+
+        $("input[name*='ref_company[]']").each(function() {
+            return ref_company_array.push($(this).val())
+        });
+        $("input[name*='ref_contact_number[]']").each(function() {
+            return ref_contact_number_array.push($(this).val())
+        });
 
 
+  
+
+
+        
+       
+       
+       
+
+
+        console.log({
+            from_month_array,
+            from_year_array,
+            position_array,
+            company_name_array,
+            reason_of_leaving_array
+        })
+      
+ 
 
 
         var template = $("#summary-template").html()
@@ -128,7 +204,29 @@ $(document).ready(function(){
             e_contact_number:e_contact_number,
             position:position,
             referred_by:referred_by,
-            where_job_found:where_job_found
+            where_job_found:where_job_found,
+            elemetary:elemetary,
+            elemetary_year_grad:elemetary_year_grad ,
+            secondary: secondary,
+            secondary_year_grad:secondary_year_grad,
+            vocational:vocational,
+            vocational_year_grad :vocational_year_grad,
+            vocational_status :vocational_status,
+            college :college,
+            college_year_grad :college_year_grad,
+            college_status :college_status,
+            vocational_course:vocational_course,
+            college_course:college_course,
+            position_array:position_array,
+            company_name_array:company_name_array,
+            from_month_array:from_month_array,
+            from_year_array:from_year_array,
+            reason_of_leaving_array:reason_of_leaving_array,
+            ref_name_array:ref_name_array,
+            ref_company_array:ref_company_array,
+            ref_contact_number_array:ref_contact_number_array,
+            ref_position_array:ref_position_array
+            
         }})
         $("#application-form-summary").append(html)
         

@@ -262,16 +262,6 @@
                     <p>{{data.spouse_name}}</p>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-6">  
-                  <label class="font-weight-bold">Spouse Name:</label>
-                </div>
-                <div class="col-md-6">  
-                    <p>{{data.spouse_name}}</p>
-                </div>
-            </div>
-
             <div id="form_license"> 
                 <div class="row">
                     <div class="col-md-6">  
@@ -346,7 +336,7 @@
                     <p>{{data.e_contact_number}}</p>
                 </div>
             </div>
-            <h1 class="h3 mb-4 mt-4">EMPLOYMENT HISTORY</h1>
+            <h1 class="h3 mb-4 mt-4">EDUCATIONAL BACKGROUND</h1>
             <div class="row">
                 <div class="col-md-6">  
                   <label class="font-weight-bold">Contact Number</label>
@@ -355,6 +345,278 @@
                     <p>{{data.e_contact_number}}</p>
                 </div>
             </div>
+
+            <div class="row"> 
+                <div class="col-md-3"><label class="font-weight-bold">Elementary</label></div>
+                <div class="col-md-4">
+                  <p>{{data.elemetary}} <p>
+                </div>
+                <div class="col-md-2"><label class="font-weight-bold">Year Graduated</label></div>
+                <div class="col-md-3">
+                    <p>{{data.elemetary_year_grad}}</p>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-3"><label class="font-weight-bold">Secondary</label></div>
+                <div class="col-md-4">
+                  <p>{{data.secondary}} <p>
+                </div>
+                <div class="col-md-2"><label class="font-weight-bold">Year Graduated</label></div>
+                <div class="col-md-3">
+                    <p>{{data.secondary_year_grad}}</p>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-3"><label class="font-weight-bold">Vocational</label></div>
+                <div class="col-md-4">
+                  <p>{{data.vocational}} <p>
+                </div>
+                <div class="col-md-2"><label class="font-weight-bold">Year Graduated</label></div>
+                <div class="col-md-3">
+                    <p>{{data.vocational_year_grad}}</p>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-3"><label class="font-weight-bold">Vocational Course</label></div>
+                <div class="col-md-4">
+                  <p>{{data.vocational_course}} <p>
+                </div>
+                <div class="col-md-2"><label class="font-weight-bold">Vacational Status</label></div>
+                <div class="col-md-3">
+                    <p>{{data.vocational_status}}</p>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-3"><label class="font-weight-bold">College</label></div>
+                <div class="col-md-4">
+                  <p>{{data.college}} <p>
+                </div>
+                <div class="col-md-2"><label class="font-weight-bold">Year Graduated</label></div>
+                <div class="col-md-3">
+                    <p>{{data.college_year_grad}}</p>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-3"><label class="font-weight-bold">College Course</label></div>
+                <div class="col-md-4">
+                  <p>{{data.college_course}} <p>
+                </div>
+                <div class="col-md-2"><label class="font-weight-bold">College Status</label></div>
+                <div class="col-md-3">
+                    <p>{{data.college_status}}</p>
+                </div>
+            </div>
+            <h1 class="h3 mb-4 mt-4">EMPLOYMENT HISTORY</h1>
+            {{-- opening --}}
+            <div class="row"> 
+                <div class="col-md-2"><label class="font-weight-bold">Company Name</label></div>
+                <div class="col-md-4">
+                  <p>{{data.company_name_array.0}} <p>
+                </div>
+                <div class="col-md-3"><label class="font-weight-bold">Position</label></div>
+                <div class="col-md-3">
+                    <p>{{data.position_array.0}}</p>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-2"><label class="font-weight-bold">From</label></div>
+                <div class="col-md-4">
+                  <p>{{data.from_month_array.0}} <p>
+                </div>
+                <div class="col-md-3"><label class="font-weight-bold">Year</label></div>
+                <div class="col-md-3">
+                    <p>{{data.from_year_array.0}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Reason of Leaving</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.reason_of_leaving_array.0}}</p>
+                </div>
+            </div>
+            {{-- closing --}}
+            {{-- opening --}}
+            <div class="row"> 
+                <div class="col-md-2"><label class="font-weight-bold">Company Name</label></div>
+                <div class="col-md-4">
+                  <p>{{data.company_name_array.1}} <p>
+                </div>
+                <div class="col-md-3"><label class="font-weight-bold">Position</label></div>
+                <div class="col-md-3">
+                    <p>{{data.position_array.1}}</p>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-2"><label class="font-weight-bold">From</label></div>
+                <div class="col-md-4">
+                  <p>{{data.from_month_array.1}} <p>
+                </div>
+                <div class="col-md-3"><label class="font-weight-bold">Year</label></div>
+                <div class="col-md-3">
+                    <p>{{data.from_year_array.1}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Reason of Leaving</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.reason_of_leaving_array.1}}</p>
+                </div>
+            </div>
+            {{-- closing --}}
+            {{-- opening --}}
+            <div class="row"> 
+                <div class="col-md-2"><label class="font-weight-bold">Company Name</label></div>
+                <div class="col-md-4">
+                  <p>{{data.company_name_array.2}} <p>
+                </div>
+                <div class="col-md-3"><label class="font-weight-bold">Position</label></div>
+                <div class="col-md-3">
+                    <p>{{data.position_array.2}}</p>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-2"><label class="font-weight-bold">From</label></div>
+                <div class="col-md-4">
+                  <p>{{data.from_month_array.2}} <p>
+                </div>
+                <div class="col-md-3"><label class="font-weight-bold">Year</label></div>
+                <div class="col-md-3">
+                    <p>{{data.from_year_array.2}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Reason of Leaving</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.reason_of_leaving_array.2}}</p>
+                </div>
+            </div>
+            {{-- closing --}}
+
+            <h1 class="h3 mb-4">CHARACTER REFERENCE</h1>
+            {{-- opening --}}
+            
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Name</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_name_array.0}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Company</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_company_array.0}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Position</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_position_array.0}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Contact Number</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_contact_number_array.0}}</p>
+                </div>
+            </div>
+            {{-- closing --}}
+            {{-- opening --}}
+            
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Name</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_name_array.1}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Company</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_company_array.1}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Position</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_position_array.1}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Contact Number</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_contact_number_array.1}}</p>
+                </div>
+            </div>
+            {{-- closing --}}
+
+            {{-- opening --}}
+            
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Name</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_name_array.2}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Company</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_company_array.2}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Position</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_position_array.2}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">  
+                  <label class="font-weight-bold">Contact Number</label>
+                </div>
+                <div class="col-md-6">  
+                    <p>{{data.ref_contact_number_array.2}}</p>
+                </div>
+            </div>
+            {{-- closing --}}
+
+
+
+            
+
+
+            
+            
+       
         </div>
     </div>
 </script>
