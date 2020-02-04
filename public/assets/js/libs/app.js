@@ -41,27 +41,96 @@ $(document).ready(function(){
 
 
 
+
     function showSummaryOfApplication() { 
 
+        $("#application-form-summary").empty()
+        var position = $("#position").val();
+        var where_job_found = $("#where_job_found").val();
+        var referred_by = $("#referred_by").val();
         var first_name = $("#first_name").val();
         var last_name = $("#last_name").val();
+        var middle_name= $("#middle_name").val();
+        var suffix= $("#suffix").val();
+        var nickname= $("#nickname").val();
+        var current_address= $("#current_address").val();
+        var permanent_address= $("#permanent_address").val();
+        var telephone_number= $("#telephone_number").val();
+        var mobile_number = $("#mobile_number").val();
+        var email = $("#email").val();
+        var gender = $("#gender").val();
+        var civil_status = $("#civil_status").val();
+        var birth_date = $("#birth_date").val();
+        var birth_place = $("#birth_place").val();
+        var height = $("#height").val();
+        var height_m = $("#height_m").val();
+        var weight = $("#weight").val();
+        var weight_m = $("#weight_m").val();
+        var religion = $("#religion").val();
+        var other_religion = $("#other_religion").val();
+        var phil_number = $("#phil_number").val();
+        var hmdf_number = $("#hmdf_number").val();
+        var tin_number = $("#tin_number").val();
+        var fathers_name = $("#fathers_name").val();
+        var mothers_name = $("#mothers_name").val();
+        var number_of_siblings = $("#number_of_siblings").val();
+        var number_of_children = $("#number_of_children").val();
+        var spouse_name = $("#spouse_name").val();
+        var restriction_code = $("#restriction_code").val();
+        var license_number = $("#license_number").val();
+        var license_expiry_date = $("#license_expiry_date").val();
+        var type_of_license = $("#type_of_license").val();
+        var e_name = $("#e_name").val();
+        var e_relation = $("#e_relation").val();
+        var e_address = $("#e_address").val();
+        var e_contact_number = $("#e_contact_number").val();
 
 
 
-        $("#application-form-summary").
-        html('<div class="row"> '+
-             '<div class="col-md-5"> <label>Position Name:</label></div>'+
-             '<div class="col-md-4"> <p>'+first_name+'</p> </div> </div>' + 
-             '<div class="row"> '+
-             '<div class="row"> '+
-             '<div class="col-md-5"> <label>First Name:</label></div>'+
-             '<div class="col-md-4"> <p>'+first_name+'</p> </div> </div>' + 
-             '<div class="row"> '+'<div class="row"> '+
-             '<div class="col-md-5"> <label>First Name:</label></div>'+
-             '<div class="col-md-4"> <p>'+first_name+'</p> </div> </div>' + 
-             '<div class="row"> '+
-             '<div class="col-md-5"> <label>Last Name:</label></div>'+
-             '<div class="col-md-4"> <p>'+last_name+'</p> </div> </div>');
+
+        var template = $("#summary-template").html()
+        var html = Mustache.render(template, {data:{
+            first_name:first_name,
+            last_name:last_name,
+            middle_name:middle_name,
+            suffix:suffix,
+            nickname:nickname,
+            current_address:current_address,
+            permanent_address:permanent_address,
+            telephone_number:telephone_number,
+            mobile_number:mobile_number,
+            email:email,
+            gender:gender,
+            civil_status:civil_status,
+            birth_date:birth_date,
+            birth_place:birth_place,
+            height:height,
+            height_m:height_m,
+            weight:weight,
+            weight_m:weight_m,
+            religion:religion,
+            other_religion:other_religion,
+            phil_number:phil_number,
+            hmdf_number:hmdf_number,
+            tin_number:tin_number,
+            fathers_name:fathers_name,
+            mothers_name:mothers_name,
+            number_of_siblings:number_of_siblings,
+            number_of_children:number_of_children,
+            spouse_name:spouse_name,
+            restriction_code:restriction_code,
+            license_number:license_number,
+            license_expiry_date:license_expiry_date,
+            type_of_license:type_of_license,
+            e_name:e_name,
+            e_relation:e_relation,
+            e_address:e_address,
+            e_contact_number:e_contact_number,
+            position:position,
+            referred_by:referred_by,
+            where_job_found:where_job_found
+        }})
+        $("#application-form-summary").append(html)
         
     }
 
